@@ -91,6 +91,13 @@ def main():
     #print sosmememehrrht
     print("--------------------------------------------------------")
 
+    print("Khan: " + " " + str("%.0f%%" % (100 * khan_percent)) + " " + str(Kha))
+    print("Correy: " + " " + str("%.0f%%" % (100 * correy_percent)) + " " + str(Cor))
+    print("Li: " + " " + str("%.0f%%" % (100 * li_percent)) + " " + str(Li))
+    print("O'Tooley: " + " " + str("%.0f%%" % (100 * otooley_percent)) + " " + str(Oto))
+
+    print("--------------------------------------------------------")
+
     print("Winner: Khan")
 
     print("--------------------------------------------------------")
