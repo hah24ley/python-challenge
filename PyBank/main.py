@@ -2,6 +2,7 @@
 import os
 import csv
 import statistics
+import numpy as np
 
 #importing the CSV file
 csvpath = "../data/budget_data.csv"
@@ -39,24 +40,34 @@ with open ("../data/budget_data.csv", "r") as csvfile:
 #get average of first and second
 #map is changing the type of one data structure to another
     pl_values = list(map(int, pl_values))
-    value_1 = pl_values[0]
-    value_2 = pl_values[1]
+    avg1 = 0
+    averages = []
+    while avg1 < len(pl_values):
+        avg2 = avg1 + 1
+        if avg2 == 86:
+            break
+        print("find the average and store")
+        print(pl_values[avg1])
+        pl1 = pl_values[avg1]
+#stroing averages within different to pull and minipulate
+        print(pl_values[avg2])
+        pl2 = pl_values[avg2]
 
-    print(value_1)
-    print(value_2)
+        change = pl2 - pl1
+        averages.append(change)
 
-    avg = (value_1 + value_2)/2
+        avg1 += 1
+
+    avg_of_change = np.mean(averages)
+
+    #answer to number three
+    #print(avg_of_change)
+    #print(averages)
+#add break to get while loop to stop at the right point
+
+#averages of averages - https://stackoverflow.com/questions/9039961/finding-the-average-of-a-list
 
 
-
-
-
-
-
-
-
-            #print(h)
-            #print(v)
 
     #print(data)
 
