@@ -92,3 +92,15 @@ def main():
 
 
 main()
+
+
+fh = open("main.txt","w")
+fh.write("Financial Analysis")
+fh.write("--------------------------------------------------------")
+fh.write("Total Months: " + str(counter))
+fh.write("Total: " + "$" + str(sum))
+fh.write("Average Change: " + "$" + str(avg_of_change))
+fh.write("Greatest Increase in Profits: " + " " + "Feb-2012" + " " + "$" + str(max))
+fh.write("Greatest Decrease in Profits: " + " " + "Sep-2013" + " " + "$" + str(min))
+
+fh.close()
