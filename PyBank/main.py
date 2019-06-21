@@ -41,25 +41,32 @@ with open ("../data/budget_data.csv", "r") as csvfile:
 #map is changing the type of one data structure to another
     pl_values = list(map(int, pl_values))
     avg1 = 0
-    averages = []
+    changes = []
     while avg1 < len(pl_values):
         avg2 = avg1 + 1
         if avg2 == 86:
             break
-        print("find the average and store")
-        print(pl_values[avg1])
+        #print(pl_values[avg1])
         pl1 = pl_values[avg1]
 #stroing averages within different to pull and minipulate
-        print(pl_values[avg2])
+        #print(pl_values[avg2])
         pl2 = pl_values[avg2]
 
         change = pl2 - pl1
-        averages.append(change)
+        changes.append(int(change))
 
         avg1 += 1
 
-    avg_of_change = np.mean(averages)
+    avg_of_change = np.mean(changes)
+    #answer to number 4 change in profit with the biggest increase --
+    #print(avg_of_change)
 
+    max = max(changes)
+    print(max)
+
+    min = min(changes)
+    print(min)
+    
     #answer to number three
     #print(avg_of_change)
     #print(averages)
