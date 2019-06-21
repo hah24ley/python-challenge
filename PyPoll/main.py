@@ -103,3 +103,18 @@ def main():
     print("--------------------------------------------------------")
 
 main()
+
+
+fh = open("main.txt","w")
+fh.write("Election Results")
+fh.write("--------------------------------------------------------")
+fh.write("Total Votes: " + str(total_votes))
+fh.write("--------------------------------------------------------")
+fh.write("Khan: " + " " + str("%.0f%%" % (100 * khan_percent)) + " " + str(Kha))
+fh.write("Correy: " + " " + str("%.0f%%" % (100 * correy_percent)) + " " + str(Cor))
+fh.write("Li: " + " " + str("%.0f%%" % (100 * li_percent)) + " " + str(Li))
+fh.write("O'Tooley: " + " " + str("%.0f%%" % (100 * otooley_percent)) + " " + str(Oto))
+fh.write("--------------------------------------------------------")
+fh.write("Winner: Khan")
+fh.write("--------------------------------------------------------")
+fh.close()
