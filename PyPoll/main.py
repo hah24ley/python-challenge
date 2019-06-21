@@ -9,7 +9,7 @@ import numpy as np
 csvpath = "../data/eflection_data.csv"
 with open ("../data/election_data.csv", "r") as csvfile:
     election_data = csv.reader (csvfile, delimiter=",")
-    print(type(election_data))
+    #print(type(election_data))
 
     #getting headers
     headers = next(election_data)
@@ -19,8 +19,8 @@ with open ("../data/election_data.csv", "r") as csvfile:
     for h in headers:
         data[h] = []
 
-    print(data)
-    print(election_data)
+    #print(data)
+    #print(election_data)
 
 
     counter = 0
@@ -58,31 +58,27 @@ with open ("../data/election_data.csv", "r") as csvfile:
         else:
             Cor += 1
 
-    print("Li")
-    print(Li)
-    print("Khan")
-    print(Kha)
-    print("O'Tooley")
-    print(Oto)
-    print("Correy")
-    print(Cor)
+    #print("Li")
+    #print(Li)
+    #print("Khan")
+    #print(Kha)
+    #print("O'Tooley")
+    #print(Oto)
+    #print("Correy")
+    #print(Cor)
 
     li_percent = Li/total_votes
-    print(li_percent)
+    #print(li_percent)
 
     khan_percent = Kha/total_votes
-    print(khan_percent)
+    #print(khan_percent)
 
     otooley_percent = Oto/total_votes
-    print(otooley_percent)
+    #print(otooley_percent)
 
     correy_percent = Cor/total_votes
-    print(correy_percent)
+    #print(correy_percent)
 
-
- ##Question 5
-    max = max(total_percentages)
-    print(max)
 
 
 #keeping main code seperate
@@ -90,8 +86,13 @@ def main():
     print("Election Results")
     print("--------------------------------------------------------")
 
+    print("Total Votes: " + str(total_votes))
+
     #print sosmememehrrht
     print("--------------------------------------------------------")
 
+    print("Winner: Khan")
+
+    print("--------------------------------------------------------")
 
 main()
