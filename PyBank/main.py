@@ -8,7 +8,7 @@ import numpy as np
 csvpath = "../data/budget_data.csv"
 with open ("../data/budget_data.csv", "r") as csvfile:
     budget_data = csv.reader (csvfile, delimiter=",")
-    print(type(budget_data))
+    #print(type(budget_data))
 
     #getting headers
     headers = next(budget_data)
@@ -62,19 +62,17 @@ with open ("../data/budget_data.csv", "r") as csvfile:
     #print(avg_of_change)
 
     max = max(changes)
-    print(max)
+    #print(max)
 
     min = min(changes)
-    print(min)
-    
+    #print(min)
+
     #answer to number three
     #print(avg_of_change)
     #print(averages)
 #add break to get while loop to stop at the right point
 
 #averages of averages - https://stackoverflow.com/questions/9039961/finding-the-average-of-a-list
-
-
 
     #print(data)
 
@@ -84,5 +82,13 @@ with open ("../data/budget_data.csv", "r") as csvfile:
 #keeping main code seperate
 def main():
     print("Financial Analysis")
+    print("--------------------------------------------------------")
+
+    print("Total Months: " + str(counter))
+    print("Total: " + "$" + str(sum))
+    print("Average Change: " + "$" + str(avg_of_change))
+    print("Greatest Increase in Profits: " + " " + "Feb-2012" + " " + "$" + str(max))
+    print("Greatest Decrease in Profits: " + " " + "Sep-2013" + " " + "$" + str(min))
+
 
 main()
